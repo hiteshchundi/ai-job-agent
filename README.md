@@ -17,7 +17,17 @@ An AI-powered automation system that:
 
 ## Current Progress
 
-- [x] Playwright setup
-- [ ] Job extraction
-- [ ] Resume matching
-- [ ] Auto apply
+- [x] Playwright browser automation setup
+- [x] LinkedIn job card extraction
+- [x] Direct job URL extraction
+- [x] Multi-page job detail scraping
+- [x] Structured job data collection
+
+## In Progress
+
+- [ ] JSON data persistence
+- [ ] PostgreSQL integration
+- [ ] Resume-job matching engine
+- [ ] Local LLM integration using Ollama
+- [ ] Automated job application workflows
+- [ ] AI-powered resume tailoring

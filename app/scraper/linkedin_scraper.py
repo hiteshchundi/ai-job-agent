@@ -20,7 +20,7 @@ def search_jobs():
             "https://www.linkedin.com/jobs/search/?keywords=data%20analyst&location=India"
         )
 
-        page.wait_for_load_state("networkidle")
+        page.wait_for_selector(".base-search-card")
 
         job_cards = page.locator(".base-search-card")
 
@@ -89,7 +89,7 @@ def search_jobs():
 
                 detail_page.goto(job["link"])
 
-                detail_page.wait_for_load_state("networkidle")
+                detail_page.wait_for_selector(".show-more-less-html__markup")
 
                 try:
 
@@ -118,5 +118,3 @@ def search_jobs():
         browser.close()
 
 
-if __name__ == "__main__":
-    search_jobs()

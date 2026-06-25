@@ -17,9 +17,35 @@ def search_jobs():
 
         page.wait_for_timeout(5000)
 
-        print(page.title())
+        job_cards = page.locator(".base-search-card")
 
-        input("Press Enter/Return to close browser...")
+        count = job_cards.count()
+
+        print(f"\nFound {count} job cards\n")
+
+        for i in range(count):
+
+            card = job_cards.nth(i)
+
+            title = card.locator(
+                ".base-search-card__title"
+            ).inner_text()
+
+            company = card.locator(
+                ".base-search-card__subtitle"
+            ).inner_text()
+
+            location = card.locator(
+                ".job-search-card__location"
+            ).inner_text()
+
+            print(f"Job {i + 1}")
+            print(f"Title: {title}")
+            print(f"Company: {company}")
+            print(f"Location: {location}")
+            print("-" * 50)
+
+        input("Press Enter to close browser...")
 
         browser.close()
 

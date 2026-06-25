@@ -22,10 +22,10 @@ An AI-powered automation system that:
 - [x] Direct job URL extraction
 - [x] Multi-page job detail scraping
 - [x] Structured job data collection
+- [x] JSON data persistence
 
 ## In Progress
 
-- [ ] JSON data persistence
 - [ ] PostgreSQL integration
 - [ ] Resume-job matching engine
 - [ ] Local LLM integration using Ollama

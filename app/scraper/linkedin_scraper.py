@@ -104,7 +104,7 @@ def search_jobs():
                 print(f"\n{job['title']}")
                 print(f"\nDescription Preview:\n")
 
-                print(description[:1000])
+                print(f"Scraped: {title}")
 
                 detail_page.close()
 
@@ -113,8 +113,8 @@ def search_jobs():
                 print(f"Error scraping job detail page")
                 print(e)
 
-        input("\nPress Enter to close browser...")
+        # input("\nPress Enter to close browser...")
 
         browser.close()
-
+    return jobs
 

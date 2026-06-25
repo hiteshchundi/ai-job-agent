@@ -1,0 +1,11 @@
+playwright
+ollama
+langchain
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pandas
+beautifulsoup4
+python-dotenv
+chromadb

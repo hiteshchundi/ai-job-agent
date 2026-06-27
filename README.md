@@ -24,10 +24,10 @@ An AI-powered automation system that:
 - [x] Structured job data collection
 - [x] JSON data persistence
 - [x] PostgreSQL integration
+- [x] Database persistence pipeline
 
 ## In Progress
 
-- [ ] Database persistence pipeline
 - [ ] Resume-job matching engine
 - [ ] Local LLM integration using Ollama
 - [ ] Automated job application workflows

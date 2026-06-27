@@ -58,8 +58,9 @@ def match_resume_to_jobs(
             f"Matching: {job['title']}"
         )
 
+        truncated_description = description[:3000]
         job_embedding = get_embedding(
-            description
+            truncated_description
         )
 
         score = cosine_similarity(

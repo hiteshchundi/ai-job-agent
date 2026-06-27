@@ -48,9 +48,12 @@ def search_jobs():
                     ".job-search-card__location"
                 ).inner_text().strip()
 
-                job_link = card.locator(
-                    ".base-card__full-link"
-                ).get_attribute("href")
+                job_link_locator = card.locator(".base-card__full-link")
+
+                if job_link_locator.count() == 0:
+                    continue
+
+                job_link = job_link_locator.first.get_attribute("href")
 
                 job_data = {
                     "title": title,
@@ -101,13 +104,12 @@ def search_jobs():
 
                     description = "Description not found"
 
+                job["description"] = description
+
                 print(f"\n{job['title']}")
-                print(f"\nDescription Preview:\n")
+                print("\nDescription Preview:\n")
 
-                print(f"Scraped: {title}")
-
-                detail_page.close()
-
+                print(description[:1000])
             except Exception as e:
 
                 print(f"Error scraping job detail page")

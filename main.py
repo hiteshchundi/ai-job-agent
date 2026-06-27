@@ -4,6 +4,8 @@ from app.utils.file_handler import save_jobs_to_json
 
 from app.utils.file_handler import load_existing_jobs
 
+from app.database.crud import save_jobs_to_db
+
 
 def main():
 
@@ -29,6 +31,8 @@ def main():
     updated_jobs = existing_jobs + new_jobs
 
     save_jobs_to_json(updated_jobs)
+
+    save_jobs_to_db(new_jobs)
 
     print(f"\nFound {len(new_jobs)} new jobs")
 

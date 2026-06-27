@@ -27,8 +27,8 @@ An AI-powered automation system that:
 - [x] Database persistence pipeline
 - [x] Resume-job matching engine
 - [x] Local LLM integration using Ollama
+- [x] Automated job application workflows
 
 ## In Progress
 
-- [ ] Automated job application workflows
 - [ ] AI-powered resume tailoring

@@ -1,0 +1,51 @@
+from app.ai.resume_generator import (
+    generate_tailored_resume
+)
+
+from app.utils.file_handler import (
+    load_existing_jobs
+)
+
+
+jobs = load_existing_jobs()
+
+
+sample_job = next(
+
+    (
+        job for job in jobs
+
+        if job.get("description")
+    ),
+
+    None
+)
+
+
+resume_bullets = [
+
+    "Reviewed pharmaceutical application documentation for GxP compliance.",
+
+    "Performed manual quality assurance validation for enterprise systems.",
+
+    "Collaborated with cross-functional teams to resolve documentation issues."
+
+]
+
+
+tailored_resume = generate_tailored_resume(
+
+    resume_bullets,
+
+    sample_job["description"]
+)
+
+
+print("\nTAILORED RESUME BULLETS\n")
+
+
+for bullet in tailored_resume:
+
+    print("=" * 60)
+
+    print(bullet)

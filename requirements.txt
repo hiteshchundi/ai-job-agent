@@ -1,11 +1,8 @@
 playwright
-ollama
-langchain
-fastapi
-uvicorn
 sqlalchemy
 psycopg2-binary
-pandas
-beautifulsoup4
+ollama
+numpy
+pymupdf
+python-docx
 python-dotenv
-chromadb

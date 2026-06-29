@@ -1,4 +1,4 @@
-# AI Job Agent
+# AI-powered job matching and resume tailoring automation system
 
 An AI-powered automation system that scrapes job listings, semantically matches them against a resume, generates ATS-optimized tailored resumes, and exports personalized resume documents using local LLMs.
 
